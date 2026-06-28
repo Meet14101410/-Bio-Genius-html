@@ -1,0 +1,16 @@
+function startGame() {
+  const questions = [
+    ["What is the powerhouse of the cell?", "mitochondria"],
+    ["How many chambers does the human heart have?", "4"],
+    ["What carries genetic information?", "dna"]
+  ];
+
+  const q = questions[Math.floor(Math.random() * questions.length)];
+  const ans = prompt(q[0]);
+
+  if (ans && ans.toLowerCase() === q[1]) {
+    alert("✅ Correct! You are a Bio Genius!");
+  } else {
+    alert("❌ Wrong! Correct answer: " + q[1]);
+  }
+}
